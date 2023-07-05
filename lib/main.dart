@@ -15,15 +15,17 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Première page'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => const SignupPage()));
-          },
-          child: const Text('Aller à la deuxième page'),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: <Color>[
+              Colors.blue[200]!,
+              Colors.blueAccent[700]!,
+              Colors.blue[900]!,
+            ],
+          ),
         ),
       ),
     );
