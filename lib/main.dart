@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'signup_page.dart';
 
 void main() {
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'Flutter Login Design',
-    home: FirstPage(),
+    home: LoginPage(),
   ));
 }
 
-class FirstPage extends StatelessWidget {
-  const FirstPage({super.key});
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class FirstPage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondPage()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const SignupPage()));
           },
           child: const Text('Aller à la deuxième page'),
         ),
@@ -30,25 +31,4 @@ class FirstPage extends StatelessWidget {
 }
 
 class RaisedButton {
-}
-
-class SecondPage extends StatelessWidget {
-  const SecondPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Deuxième page'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-         child: const Text('Retourner à la première page'),
-        ),
-      ),
-    );
-  }
 }
