@@ -18,10 +18,11 @@ class FirstPage extends StatelessWidget {
         title: const Text('Première page'),
       ),
       body: Center(
-        child: ElevatedButton(onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => SecondPage()));
-        },
-        child: const Text('Aller à la deuxième page'),
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondPage()));
+          },
+          child: const Text('Aller à la deuxième page'),
         ),
       ),
     );
@@ -32,11 +33,21 @@ class RaisedButton {
 }
 
 class SecondPage extends StatelessWidget {
+  const SecondPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Deuxième page'),
+        title: const Text('Deuxième page'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+         child: const Text('Retourner à la première page'),
+        ),
       ),
     );
   }
