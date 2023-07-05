@@ -40,9 +40,6 @@ class LoginPage extends StatelessWidget {
   }
 }
 
-class RaisedButton {
-}
-
 Widget flutterIcon = Container(
   height: 250,
   width: 250,
