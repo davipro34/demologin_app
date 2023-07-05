@@ -27,6 +27,17 @@ class LoginPage extends StatelessWidget {
             ],
           ),
         ),
+        child: const Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Future Section 1'),
+              Text('Future Section 2'),
+              Text('Future Section 3'),
+              Text('Future Section 4'),
+            ],
+          ),
+        ),
       ),
     );
   }
