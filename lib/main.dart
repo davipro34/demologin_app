@@ -27,14 +27,11 @@ class LoginPage extends StatelessWidget {
             ],
           ),
         ),
-        child: const Center(
+        child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Future Section 1'),
-              Text('Future Section 2'),
-              Text('Future Section 3'),
-              Text('Future Section 4'),
+              flutterIcon,
             ],
           ),
         ),
@@ -45,3 +42,14 @@ class LoginPage extends StatelessWidget {
 
 class RaisedButton {
 }
+
+Widget flutterIcon = Container(
+  height: 250,
+  width: 250,
+  padding: const EdgeInsets.all(30),
+  margin: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(50),
+    color: Colors.white,
+  ),
+);
