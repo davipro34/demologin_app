@@ -46,7 +46,24 @@ Widget flutterIcon = Container(
   padding: const EdgeInsets.all(30),
   margin: const EdgeInsets.fromLTRB(0, 40, 0, 0),
   decoration: BoxDecoration(
-    borderRadius: BorderRadius.circular(50),
-    color: Colors.white,
+    borderRadius: BorderRadius.circular(70),
+    color: const Color.fromRGBO(255, 255, 255, 0.1),
+  ),
+  child: Container(
+    padding: const EdgeInsets.all(20),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(50),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.black.withOpacity(0.1),
+          spreadRadius: 7,
+          blurRadius: 15,
+          offset: const Offset(0, 3),
+        ),
+      ],
+    ),
+    child: Image.asset("assets/images/icon_flutter.png"),
   ),
 );
+
