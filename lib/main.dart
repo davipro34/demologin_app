@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'signup_page.dart';
+import 'package:google_fonts/google_fonts.dart';
+// import 'signup_page.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -32,6 +33,8 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               flutterIcon,
+              titleSection,
+              textSection,
             ],
           ),
         ),
@@ -67,3 +70,39 @@ Widget flutterIcon = Container(
   ),
 );
 
+Widget titleSection = Container(
+  margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+  child: Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Text(
+        'Flutter',
+        style: GoogleFonts.exo(
+          fontSize: 40,
+          fontWeight: FontWeight.w900,
+          color: Colors.white,
+        ),
+      ),
+      const SizedBox(width: 3,),
+      Text(
+        'Login',
+        style: GoogleFonts.exo(
+          fontSize: 40,
+          fontWeight: FontWeight.w900,
+          color: Colors.lightGreenAccent[400],
+        ),
+      ),
+    ],
+  ),
+);
+
+Widget textSection =Container(
+  margin: EdgeInsets.fromLTRB(0, 5, 0, 50),
+  child: Text(
+    'Page de connexion Flutter',
+    style: GoogleFonts.comfortaa(
+      fontSize: 16,
+      fontWeight: FontWeight.bold,
+    ),
+  ),
+);
