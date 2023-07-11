@@ -134,6 +134,26 @@ Widget inputSection = Container(
                 color: Colors.blue[900],
               ),
             ),
+            Container(
+                height: 60,
+                width: 230,
+                child: TextField(
+                  textAlign: TextAlign.center,
+                  obscureText: false,
+                  style: GoogleFonts.comfortaa(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  decoration: InputDecoration(
+                    hintText: 'Pseudo',
+                    hintStyle: GoogleFonts.comfortaa(
+                      color: Colors.white,
+                    ),
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
           ],
         ),
       ),
@@ -160,6 +180,26 @@ Widget inputSection = Container(
                 color: Colors.blue[900],
               ),
             ),
+            Container(
+                height: 60,
+                width: 230,
+                child: TextField(
+                  textAlign: TextAlign.center,
+                  obscureText: true,
+                  style: GoogleFonts.comfortaa(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  decoration: InputDecoration(
+                    hintText: 'Mot de passe',
+                    hintStyle: GoogleFonts.comfortaa(
+                      color: Colors.white,
+                    ),
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
           ],
         ),
       ),
