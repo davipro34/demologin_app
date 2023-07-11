@@ -35,6 +35,7 @@ class LoginPage extends StatelessWidget {
               flutterIcon,
               titleSection,
               textSection,
+              inputSection,
             ],
           ),
         ),
@@ -96,13 +97,33 @@ Widget titleSection = Container(
   ),
 );
 
-Widget textSection =Container(
-  margin: EdgeInsets.fromLTRB(0, 5, 0, 50),
+Widget textSection = Container(
+  margin: const EdgeInsets.fromLTRB(0, 5, 0, 50),
   child: Text(
     'Page de connexion Flutter',
     style: GoogleFonts.comfortaa(
       fontSize: 16,
       fontWeight: FontWeight.bold,
     ),
+  ),
+);
+
+Widget inputSection = Container(
+  color: Colors.green,
+  margin: const EdgeInsets.all(30),
+  child: Column(
+    children: [
+      Container(
+        height: 60,
+        color: Colors.white,
+        padding: const EdgeInsets.all(20),
+      ),
+      const SizedBox(height: 30),
+      Container(
+        height: 60,
+        color: Colors.white,
+        padding: const EdgeInsets.all(20),
+      ),
+    ],
   ),
 );
