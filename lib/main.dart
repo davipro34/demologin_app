@@ -36,6 +36,7 @@ class LoginPage extends StatelessWidget {
               titleSection,
               textSection,
               inputSection,
+              ButtonWidget(),
             ],
           ),
         ),
@@ -206,3 +207,27 @@ Widget inputSection = Container(
     ],
   ),
 );
+
+class ButtonWidget extends StatelessWidget {
+  const ButtonWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {},
+      style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        backgroundColor: Colors.white,
+        padding: EdgeInsets.fromLTRB(130, 15, 130, 15),
+      ),
+      child: Text(
+        'Connexion'.toUpperCase(),
+        style: TextStyle(
+          color: Colors.blue[900],
+        ),
+      ),
+    );
+  }
+}
