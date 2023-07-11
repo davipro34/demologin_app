@@ -109,20 +109,59 @@ Widget textSection = Container(
 );
 
 Widget inputSection = Container(
-  color: Colors.green,
   margin: const EdgeInsets.all(30),
   child: Column(
     children: [
       Container(
+        decoration: BoxDecoration(
+          color: Colors.white.withOpacity(0.1),
+          borderRadius: BorderRadius.circular(30),
+          border: Border.all(width: 1, color: Colors.white30),
+        ),
         height: 60,
-        color: Colors.white,
-        padding: const EdgeInsets.all(20),
+        child: Row(
+          children: [
+            Container(
+              height: 60,
+              width: 60,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(30),
+              ),
+              child: Icon(
+                Icons.people_outline,
+                size: 30,
+                color: Colors.blue[900],
+              ),
+            ),
+          ],
+        ),
       ),
       const SizedBox(height: 30),
       Container(
         height: 60,
-        color: Colors.white,
-        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          color: Colors.white.withOpacity(0.1),
+          borderRadius: BorderRadius.circular(30),
+          border: Border.all(width: 1, color: Colors.white30),
+        ),
+        child: Row(
+          children: [
+            Container(
+              height: 60,
+              width: 60,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(30),
+              ),
+              child: Icon(
+                Icons.lock_outline,
+                size: 30,
+                color: Colors.blue[900],
+              ),
+            ),
+          ],
+        ),
       ),
     ],
   ),
