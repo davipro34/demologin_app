@@ -39,6 +39,7 @@ class LoginPage extends StatelessWidget {
               inputSection,
               const ButtonWidget(),
               bottomSection,
+              forgetButton,
             ],
           ),
         ),
@@ -241,7 +242,7 @@ class ButtonWidget extends StatelessWidget {
 }
 
 Widget bottomSection = Container(
-  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+  margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
   child: Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
@@ -249,7 +250,7 @@ Widget bottomSection = Container(
         'Pas encore de compte ?',
         style: GoogleFonts.comfortaa(color: Colors.white),
       ),
-      SignupButton(),
+      const SignupButton(),
     ],
   ),
 );
@@ -268,8 +269,24 @@ class SignupButton extends StatelessWidget {
       },
       child: Text(
         'Inscrivez-vous',
-        style: GoogleFonts.comfortaa(color: Colors.white),
+        style: GoogleFonts.comfortaa(
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }
 }
+
+Widget forgetButton = Container(
+  margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+  child: TextButton(
+    onPressed: () {},
+    child: Text('Mot de passe oublié ?',
+      style: GoogleFonts.comfortaa(
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+  ),
+);
