@@ -1,3 +1,4 @@
+import 'package:demologin_app/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 // import 'signup_page.dart';
@@ -36,7 +37,8 @@ class LoginPage extends StatelessWidget {
               titleSection,
               textSection,
               inputSection,
-              ButtonWidget(),
+              const ButtonWidget(),
+              bottomSection,
             ],
           ),
         ),
@@ -214,19 +216,59 @@ class ButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const SignupPage()),  
+        );
+      },
       style: ElevatedButton.styleFrom(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
         ),
         backgroundColor: Colors.white,
-        padding: EdgeInsets.fromLTRB(130, 15, 130, 15),
+        padding: const EdgeInsets.fromLTRB(110, 15, 110, 15),
       ),
       child: Text(
         'Connexion'.toUpperCase(),
         style: TextStyle(
           color: Colors.blue[900],
+          fontSize: 20,
         ),
+      ),
+    );
+  }
+}
+
+Widget bottomSection = Container(
+  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+  child: Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Text(
+        'Pas encore de compte ?',
+        style: GoogleFonts.comfortaa(color: Colors.white),
+      ),
+      SignupButton(),
+    ],
+  ),
+);
+
+class SignupButton extends StatelessWidget {
+  const SignupButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const SignupPage()),  
+        );
+      },
+      child: Text(
+        'Inscrivez-vous',
+        style: GoogleFonts.comfortaa(color: Colors.white),
       ),
     );
   }
