@@ -26,6 +26,7 @@ class SignupPage extends StatelessWidget {
             children: [
               topSection,
               inputSection,
+              signupButton,
             ],
           ),
       ),
@@ -118,6 +119,52 @@ Widget inputSection = Container(
       ),
       const SizedBox(height: 30),
       Container(
+        decoration: BoxDecoration(
+          color: Colors.white.withOpacity(0.1),
+          borderRadius: BorderRadius.circular(30),
+          border: Border.all(width: 1, color: Colors.white30),
+        ),
+        height: 60,
+        child: Row(
+          children: [
+            Container(
+              height: 60,
+              width: 60,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(30),
+              ),
+              child: Icon(
+                Icons.mail_outline,
+                size: 30,
+                color: Colors.blue[900],
+              ),
+            ),
+            Container(
+                height: 60,
+                width: 230,
+                child: TextField(
+                  textAlign: TextAlign.center,
+                  obscureText: false,
+                  style: GoogleFonts.comfortaa(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  decoration: InputDecoration(
+                    hintText: 'Adresse email',
+                    hintStyle: GoogleFonts.comfortaa(
+                      color: Colors.white,
+                    ),
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
+          ],
+        ),
+      ),
+      const SizedBox(height: 30),
+      Container(
         height: 60,
         decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.1),
@@ -162,6 +209,70 @@ Widget inputSection = Container(
           ],
         ),
       ),
+      const SizedBox(height: 30),
+      Container(
+        height: 60,
+        decoration: BoxDecoration(
+          color: Colors.white.withOpacity(0.1),
+          borderRadius: BorderRadius.circular(30),
+          border: Border.all(width: 1, color: Colors.white30),
+        ),
+        child: Row(
+          children: [
+            Container(
+              height: 60,
+              width: 60,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(30),
+              ),
+              child: Icon(
+                Icons.date_range,
+                size: 30,
+                color: Colors.blue[900],
+              ),
+            ),
+            Container(
+                height: 60,
+                width: 230,
+                child: TextField(
+                  textAlign: TextAlign.center,
+                  obscureText: true,
+                  style: GoogleFonts.comfortaa(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  decoration: InputDecoration(
+                    hintText: 'Date de naissance',
+                    hintStyle: GoogleFonts.comfortaa(
+                      color: Colors.white,
+                    ),
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
+          ],
+        ),
+      ),
     ],
   ),
+);
+
+Widget signupButton = ElevatedButton(
+      onPressed: () {},
+      style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        backgroundColor: Colors.white,
+        padding: const EdgeInsets.fromLTRB(110, 15, 110, 15),
+      ),
+      child: Text(
+        'Inscription'.toUpperCase(),
+        style: TextStyle(
+          color: Colors.blue[900],
+          fontSize: 20,
+        ),
+      ),
 );
