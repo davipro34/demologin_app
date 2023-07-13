@@ -22,7 +22,7 @@ class SignupPage extends StatelessWidget {
             ],
           ),
         ),
-        child: Column(
+        child: ListView(
             children: [
               topSection,
               inputSection,
@@ -237,7 +237,7 @@ Widget inputSection = Container(
                 width: 230,
                 child: TextField(
                   textAlign: TextAlign.center,
-                  obscureText: true,
+                  obscureText: false,
                   style: GoogleFonts.comfortaa(
                     fontSize: 20,
                     color: Colors.white,

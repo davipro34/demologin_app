@@ -30,8 +30,7 @@ class LoginPage extends StatelessWidget {
           ),
         ),
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          child: ListView(
             children: [
               flutterIcon,
               titleSection,
@@ -102,6 +101,7 @@ Widget titleSection = Container(
 );
 
 Widget textSection = Container(
+  alignment: Alignment.center,
   margin: const EdgeInsets.fromLTRB(0, 5, 0, 50),
   child: Text(
     'Page de connexion Flutter',
