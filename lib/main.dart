@@ -51,7 +51,7 @@ Widget flutterIcon = Container(
   height: 250,
   width: 250,
   padding: const EdgeInsets.all(30),
-  margin: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+  margin: const EdgeInsets.fromLTRB(60, 40, 60, 0),
   decoration: BoxDecoration(
     borderRadius: BorderRadius.circular(70),
     color: const Color.fromRGBO(255, 255, 255, 0.1),
@@ -228,7 +228,7 @@ class ButtonWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
         ),
         backgroundColor: Colors.white,
-        padding: const EdgeInsets.fromLTRB(110, 15, 110, 15),
+        padding: EdgeInsets.fromLTRB(0, 15, 0, 15),
       ),
       child: Text(
         'Connexion'.toUpperCase(),
